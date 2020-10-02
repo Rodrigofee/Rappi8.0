@@ -5,17 +5,21 @@
  */
 package rappi;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Rodrigo
  */
 public class Rappi {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner sc = new Scanner(System.in);
+        Info i = new Info();
+
+        while (true) {
+            i.getMenu();
+        }
+
     }
-    
 }
