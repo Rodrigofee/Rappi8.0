@@ -31,4 +31,9 @@ public class Cliente {
 		this.beneficio = beneficio;
 	}
 	
+	@Override
+	public String toString() {
+		return "Nome: " + this.nome + ", CPF: " + this.cpf + 
+				", Nivel: " + this.nivel + ", Beneficio: " + this.beneficio;
+	}
 }

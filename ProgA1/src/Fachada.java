@@ -20,8 +20,8 @@ private static Fachada instancia;
 		controladorCliente.inserirCliente(c);
 		}
 
-	public Cliente procurarClientePeloCpf(String cpf) throws ClienteException {
-		return controladorCliente.procurarClientePeloCpf(cpf);
+	public void procurarClientePeloCpf(String cpf) throws ClienteException {
+		controladorCliente.procurarClientePeloCpf(cpf);
 	}
 
 	public boolean removerCliente(String cpf) throws ClienteException {

@@ -25,14 +25,8 @@ public class ControladorCliente {
 		}	
 	}
 
-	public Cliente procurarClientePeloCpf(String cpf) throws ClienteException {
-		if (repositorioCliente.procurarClientePeloCpf(cpf) == null) {
-			throw new ClienteException("Não existe cliente com o cpf passado");
-		} else {
+	public void procurarClientePeloCpf(String cpf) throws ClienteException {
 			repositorioCliente.procurarClientePeloCpf(cpf);
-
-		}	
-		return null;
 	}
 
 	public boolean removerCliente(String cpf) throws ClienteException {

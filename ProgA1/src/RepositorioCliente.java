@@ -21,13 +21,12 @@ public class RepositorioCliente {
 		listaCliente.add(c);
 	}
 
-	public Cliente procurarClientePeloCpf(String cpf) throws ClienteException {
-		for (Cliente c : listaCliente) {
-			if (listaCliente!= null && c.getCpf().equalsIgnoreCase(cpf)) {
-				return (Cliente) listaCliente;
-			}	
+	public void procurarClientePeloCpf(String cpf) throws ClienteException {
+		for (int i = 0; i<listaCliente.size(); i++) {
+			if (listaCliente!= null && listaCliente.get(i).getCpf().equalsIgnoreCase(cpf)) {
+				System.out.println(listaCliente.get(i).toString());
+			}
 		}
-		return null;
 	}
 
 	public boolean removerCliente(String cpf) throws ClienteException {
