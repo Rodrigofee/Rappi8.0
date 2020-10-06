@@ -17,7 +17,7 @@ public class ControladorCliente {
 
 	public void inserirCliente(Cliente c) throws ClienteException {
 		
-		if (repositorioCliente.existeCliente(c.getCpf())) {
+		if (repositorioCliente.existeCliente(c.getTitular())) {
 			throw new ClienteException("Cliente com cpf já existente");
 		} else {
 			repositorioCliente.inserirCliente(c);
@@ -25,18 +25,22 @@ public class ControladorCliente {
 		}	
 	}
 
-	public void procurarClientePeloCpf(String cpf) throws ClienteException {
-			repositorioCliente.procurarClientePeloCpf(cpf);
+	public void procurarClientePeloCpf(String titular) throws ClienteException {
+			repositorioCliente.procurarClientePeloCpf(titular);
 	}
 
-	public boolean removerCliente(String cpf) throws ClienteException {
+	public boolean removerCliente(String titular) throws ClienteException {
 		
-		if (repositorioCliente.removerCliente(cpf)) {
+		if (repositorioCliente.removerCliente(titular)) {
 			throw new ClienteException("Não existe cliente com o cpf passado");
 		} else {
-			repositorioCliente.removerCliente(cpf);
+			repositorioCliente.removerCliente(titular);
 
 		}	
 		return false;
+	}
+	
+	public void Compra(String titular, int pontos) {
+		repositorioCliente.Compra(titular, pontos);
 	}
 }

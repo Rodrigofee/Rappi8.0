@@ -20,11 +20,15 @@ private static Fachada instancia;
 		controladorCliente.inserirCliente(c);
 		}
 
-	public void procurarClientePeloCpf(String cpf) throws ClienteException {
-		controladorCliente.procurarClientePeloCpf(cpf);
+	public void procurarClientePeloCpf(String titular) throws ClienteException {
+		controladorCliente.procurarClientePeloCpf(titular);
 	}
 
-	public boolean removerCliente(String cpf) throws ClienteException {
-		return controladorCliente.removerCliente(cpf);		
+	public boolean removerCliente(String titular) throws ClienteException {
+		return controladorCliente.removerCliente(titular);		
+	}
+	
+	public void Compra(String titular, int pontos) {
+		controladorCliente.Compra(titular, pontos);
 	}
 }

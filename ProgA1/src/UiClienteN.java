@@ -18,11 +18,16 @@ public class UiClienteN {
 			inserirCliente();
 			break;
 		case 2:
-			String cpf2;
+			String titular2;
+			int pontos;
 			System.out.println("Digite o cpf");
-			cpf2 = s.next();
+			titular2 = s.next();
+			System.out.println("Digite o valor da sua compra");
+			pontos = s.nextInt();
+			
 			try {
-				fachada.procurarClientePeloCpf(cpf2);
+				fachada.Compra(titular2, pontos);
+				fachada.procurarClientePeloCpf(titular2);
 			} catch (ClienteException e) {
 				System.out.println(e.getMessage());
 			}
@@ -41,7 +46,7 @@ public class UiClienteN {
 		System.out.println("Digite o nome");
 		c.setNome(s.next());
 		System.out.println("Digite o cpf");
-		c.setCpf(s.next());
+		c.setTitular(s.next());
 		
 		try {
 			fachada.inserirCliente(c);
